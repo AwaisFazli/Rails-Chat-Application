@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsChatApplication</title>
+    <title>Chat Application</title>
+    <%= favicon_link_tag %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <main class="container flex">
-      <%= yield %>
+    <main>
+      <%= render 'layouts/navigation' %>
+      <div class="container mx-auto flex">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
