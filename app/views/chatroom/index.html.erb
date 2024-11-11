@@ -8,14 +8,13 @@
   <div class="flex w-full gap-x-4 grow">
     <div class="w-[80%] border-2 shadow-xl p-2 h-full flex flex-col rounded-lg">
       <div class="grow overflow-y-auto h-[400px]">
-        <p>Hello</p>
-        <p>hi there</p>
-        <p>hows it going?</p>
-        <p>good good</p>
+        <%= render @messages %>
       </div>
       <div class="flex">
         <input type="text" placeholder="Chat" class="rounded-md w-full" />
-        <button class="px-2">Send</button>
+        <button class="px-2">
+          <%= lucide_icon :send, class: 'w-8 h-8 text-orange-500' %>
+        </button>
       </div>
     </div>
     <div class="w-[20%] border-2 shadow-xl p-2 rounded-lg">
