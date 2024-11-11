@@ -1,1 +1,36 @@
-This is Home Page
+<div class="flex flex-col w-full min-h-[90vh]">
+  <div class="w-full flex flex-col items-center justify-center py-4">
+    <div class="rounded-full border-4 p-2 border-gray-200">
+      <%= lucide_icon :coffee, class: 'w-16 h-16 text-orange-500' %>
+    </div>
+    <h1 class="text-2xl font-medium text-gray-600">Let's Chat</h1>
+  </div>
+  <div class="flex w-full gap-x-4 grow">
+    <div class="w-[80%] border-2 shadow-xl p-2 h-full flex flex-col rounded-lg">
+      <div class="grow overflow-y-auto h-[400px]">
+        <p>Hello</p>
+        <p>hi there</p>
+        <p>hows it going?</p>
+        <p>good good</p>
+      </div>
+      <div class="flex">
+        <input type="text" placeholder="Chat" class="rounded-md w-full" />
+        <button class="px-2">Send</button>
+      </div>
+    </div>
+    <div class="w-[20%] border-2 shadow-xl p-2 rounded-lg">
+      <div class="text-center font-medium text-xl py-2">Online Members</div>
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <p class="text-white p-2 font-medium text-lg border border-b-gray-500">
+          Awais
+        </p>
+        <p class="text-white p-2 font-medium text-lg border border-b-gray-500">
+          Mutahir
+        </p>
+        <p class="text-white p-2 font-medium text-lg border border-b-gray-500">
+          Me
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
