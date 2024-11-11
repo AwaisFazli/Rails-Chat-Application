@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   delete "logout", to:"sessions#destroy"
   post "message", to:"messages#create"
 
+  mount ActionCable.server, at: '/cable'
+
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")

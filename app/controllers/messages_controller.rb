@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def create
     message = current_user.message.build(message_params)
     if message.save
-      redirect_to root_path
+      ActionCable.server.broadcast "chatroom_channel", { mod_message: message_render(message) }
     else
       # handle failure, e.g., render an error message or re-render the form
     end
@@ -14,5 +14,9 @@ class MessagesController < ApplicationController
 
   def message_params
     params.permit(:body) 
+  end
+
+  def message_render(message)
+    render(partial: "message", locals: {message: message})
   end
 end
