@@ -10,12 +10,12 @@
       <div class="grow overflow-y-auto h-[400px]">
         <%= render @messages %>
       </div>
-      <div class="flex">
-        <input type="text" placeholder="Chat" class="rounded-md w-full" />
-        <button class="px-2">
+      <%= form_with url: message_path, method: :post, local: true, html: { class: "flex" } do |form| %>
+        <%= form.text_field :body, placeholder: "Chat", class: "rounded-md w-full" %>
+        <button type="submit" class="px-2">
           <%= lucide_icon :send, class: 'w-8 h-8 text-orange-500' %>
         </button>
-      </div>
+      <% end %>
     </div>
     <div class="w-[20%] border-2 shadow-xl p-2 rounded-lg">
       <div class="text-center font-medium text-xl py-2">Online Members</div>

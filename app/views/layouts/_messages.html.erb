@@ -1,0 +1,10 @@
+<% flash.each do |message_type, message_content| %>
+  <div class="flash-message flex justify-between items-center p-4 mb-4 rounded-lg 
+              <%= message_type == 'success' ? 'bg-green-200 text-green-800' : '' %>
+              <%= message_type == 'error' ? 'bg-red-200 text-red-800' : '' %>">
+    <span><%= message_content %></span>
+    <button onclick="this.parentElement.style.display='none'" class="ml-4 text-gray-600 hover:text-gray-900">
+      <%= lucide_icon :x, class: 'w-8 h-8' %>
+    </button>
+  </div>
+<% end %>
