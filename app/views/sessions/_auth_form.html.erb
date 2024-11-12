@@ -1,0 +1,30 @@
+<div class="flex flex-col w-full min-h-[90vh]">
+  <div class="w-full flex flex-col items-center justify-center py-4">
+    <h1 class="text-4xl font-semibold mb-6">Welcome to Message App</h1>
+    <div class="rounded-full border-4 p-2 border-gray-200">
+      <%= lucide_icon :power, class: 'w-16 h-16 text-orange-500' %>
+    </div>
+    <h1 class="text-2xl font-medium text-gray-600"><%= form_title %> to continue</h1>
+  </div>
+
+  <div class="flex w-full rounded-lg border-2 border-gray-300 justify-between p-3 py-10">
+    <div class="w-1/2 flex flex-col justify-center items-center border-r-2">
+      <%= form_with url: form_action, scope: :user, local: true, html: { role: "form" } do |form| %>
+        <div class="flex flex-col gap-y-1 max-w-min mb-4">
+          <%= form.label :username, class: 'font-medium' %>
+          <%= form.text_field :username, class: 'rounded-md max-w-[300px]', placeholder: "Enter username" %>
+        </div>
+
+        <div class="flex flex-col gap-y-1 max-w-min mb-4">
+          <%= form.label :passowrd, class: 'font-medium' %>
+          <%= form.text_field :password, class: 'rounded-md max-w-[300px]', placeholder: "Enter password" %>
+        </div>
+        <%= form.submit button_text, class: 'bg-orange-500 text-white rounded-lg text-lg py-2 px-4' %>
+      <% end %>
+    </div>
+
+    <div class="w-1/2 flex justify-center items-center">
+      <%= link_to link_text, link_path, class: 'bg-orange-500 text-white rounded-lg text-lg py-2 px-4' %>
+    </div>
+  </div>
+</div>

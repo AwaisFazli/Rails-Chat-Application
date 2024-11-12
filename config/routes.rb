@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   mount ActionCable.server, at: '/cable'
 
+  get '/signup', to: 'registrations#new'
+  post '/signup', to: 'registrations#create'
+
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
