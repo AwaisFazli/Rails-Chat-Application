@@ -2,25 +2,7 @@
 
 start server with: "./bin/dev"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Screenshot from 2024-11-12 08-48-10](https://github.com/user-attachments/assets/b90b80d9-d968-4e78-8fab-625a0d9f8a5b)
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Screenshot from 2024-11-12 08-04-34](https://github.com/user-attachments/assets/81456246-46b7-4875-97c4-847a66e5d1d7)
